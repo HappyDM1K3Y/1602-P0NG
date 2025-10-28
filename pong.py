@@ -48,8 +48,8 @@ def check_collision():
 
 def show_score():
     oledExp.clear()
-    oledExp.setText(f'Team 1 {score[0]}', 0)
-    oledExp.setText(f'Team 2 {score[1]}', 1)
+    oledExp.setText('Team 1 {}'.format(score[0]), 0)
+    oledExp.setText('Team 2 {}'.format(score[1]), 1)
     time.sleep(2)
 
 def game_loop():
