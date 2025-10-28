@@ -36,8 +36,9 @@ def draw_screen():
         line1[8] = '.'
     else:
         line2[8] = '.'
-    oledExp.setText(''.join(line1), 0)
-    oledExp.setText(''.join(line2), 1)
+    import os
+os.system("oled-exp -s 'Team 1 {}' -l 0".format(score[0]))
+os.system("oled-exp -s 'Team 2 {}' -l 1".format(score[1]))
 
 def check_collision():
     if ball_pos == 0 and paddle_pos[0] == 8:
